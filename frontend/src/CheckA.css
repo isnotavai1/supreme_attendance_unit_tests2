@@ -1,0 +1,28 @@
+#checkA span{
+    border: 1px solid black;
+    padding: 0.1rem;
+    margin-left: 0.5rem;
+}
+#TopBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+#TopBar input{
+    font-family: cursive;
+    padding: 0.2rem;
+    outline: none;
+    max-width: 50vw;
+}
+#TopBar button{
+    border: 1px solid blueviolet;
+    padding: 0.4rem;
+    border-radius: 5px;
+    background-color: purple;
+    color: white;
+    font-family: cursive;
+}
+#CheckATime{
+    padding: 0.5rem;
+    font-family: cursive;
+}

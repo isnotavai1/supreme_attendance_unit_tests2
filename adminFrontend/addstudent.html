@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+<body>
+    <p>class id:</p>
+    <input type = "text" id = "classid">
+    <input type = "number" id = "rollno">
+    <p>Image</p>
+    <input type="file" id = "hasPhoto">
+    <br>
+    <button type = "button" id = "sub" onclick="addthem()">Submit</button>
+    <script>
+        const toBase64 = file => new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = reject;
+        });
+        
+        async function Main() {
+           const file = document.querySelector('#hasPhoto').files[0];
+           return await toBase64(file);
+        }
+        
+        const addthem = () => {
+            let class_id = document.getElementById("classid").value
+            let stu_fir_name = "S"+document.getElementById("rollno").value
+            let stu_sec_name = "L"+document.getElementById("rollno").value
+            let email_id = (document.getElementById("rollno").value % 2 == 0 ? "alokmishra182003@gmail.com" : "co.b.13.alok.mishra@gmail.com")
+            Main().then((res) => {
+                let default_img = res;
+                let str = "data:image/jpeg;base64,";
+                default_img = default_img.substr(23 , default_img.length - 22);
+                console.log(default_img)
+                var xhr = new XMLHttpRequest();
+xhr.open('POST', 'http://192.168.8.229:8080/addStudent', true);
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhr.onload = function () {
+    // do something to response
+    console.log(this.responseText);
+};
+xhr.send(`class_id=${class_id}&email_id=${email_id}&stu_fir_name=${stu_fir_name}&stu_last_name=${stu_sec_name}&default_img=${default_img}&roll_no=${document.getElementById("rollno").value}`);
+            })
+            
+        }
+        document.getElementById("sub").addEventListener(onclick , (e)=>{
+
+            console.log("run")
+            addthem()
+        })
+
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+#TakeA{
+    display: flex;
+    justify-content: center;
+    
+}
+#TakeAForm p{
+    margin-bottom: 1rem ;
+    font-size: 1.4rem;
+    color: white;
+    font-family: cursive;
+}
+#TakeAForm{
+    margin-top: 30vh;
+    background-color: purple;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+}
+#TakeAForm select:hover{
+    cursor: pointer;
+}
+#TakeAForm select{
+    padding: 0.5rem;
+    outline: none;
+    margin-bottom: 1rem;
+    font-family: cursive;
+}
+#TakeAForm div{
+    display: flex;
+    justify-content: center;
+}
+#TakeAForm button{
+    border: 1px solid beige;
+    border-radius: 10px;
+    color: beige;
+    font-family: cursive;
+    padding: 0.5rem;
+    
+}

@@ -1,0 +1,49 @@
+#Login{
+    display: flex;
+    justify-content: center;
+    padding-top: 8rem;
+}
+#Form{
+    font-family: cursive;
+    background-color: purple;
+    padding: 0.5rem 1rem;
+    color: beige;
+}
+#Form p{
+    margin: 0 0 0.5rem 0;
+    font-size: min(2rem , 20px);
+    width: 100%;
+    height: fit-content;
+}
+#Form input{
+    outline: none;
+    margin:  0 0 0.5rem 0;
+    font-size: 1.3rem;
+    padding: 0.2rem;
+    font-family: cursive;
+    width: 18rem;
+}
+#inppass{
+    width: 16rem !important;
+}
+#Form div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#Form div button{
+    border: 1px solid white;
+    padding: 0.5rem;  
+}
+#Form div button:hover{
+    box-shadow: 0 0 15px rgb(10, 220, 73); 
+    color: hotpink;
+    background-color: blueviolet;
+}
+#eye{
+    font-size: 2rem;
+    padding-top: 0.2rem;
+}
+#eye:hover{
+    cursor: pointer;
+}

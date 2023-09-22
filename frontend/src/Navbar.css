@@ -1,0 +1,20 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem;
+    font-family: cursive;
+    background-color: purple;
+}
+#navbar-name{
+    color: beige;
+}
+#navbar-login button{
+    border: 1px solid beige;
+    padding: 0.1rem 0.5rem;
+    color: beige;
+}
+#navbar-login button:hover{
+    color: hotpink;
+    background-color: blueviolet;
+    box-shadow: 0 0 15px rgb(10, 220, 73); 
+}
